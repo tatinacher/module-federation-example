@@ -43,7 +43,7 @@ module.exports = {
       name: "nav",
       filename: "remoteEntry.js",
       remotes: {
-        cart: "home@http://localhost:8080/remoteEntry.js",
+        home: "home@http://localhost:8080/remoteEntry.js",
       },
       exposes: {
         "./Header": "./src/Header",

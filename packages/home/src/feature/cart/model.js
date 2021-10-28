@@ -1,10 +1,8 @@
-import { createEffect, createStore } from "effector";
+import { createEvent, createStore } from "effector";
 
-const $cart = createStore(5);
-
-const incrementCart = createEffect();
+const $cart = createStore(0);
+const incrementCart = createEvent();
 
 $cart.on(incrementCart, (state) => state + 1);
 
-$cart.subscribe(() => console.log("in home"));
 export default { $cart, incrementCart };

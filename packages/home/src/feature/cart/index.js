@@ -1,2 +1,1 @@
-export { Name } from "./view";
-export * from "./model";
+export { Cart } from "./view";
