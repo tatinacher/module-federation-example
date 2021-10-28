@@ -1,6 +1,7 @@
 import React from "react";
 import { reflect } from "@effector/reflect";
 import model from "home/cart";
+import { buttonStyle } from "../../lib/styles";
 
 const CartBlock = ({ cart, increment }) => (
   <div>
@@ -11,18 +12,7 @@ const CartBlock = ({ cart, increment }) => (
     >
       Count of cart {cart}
     </div>
-    <button
-      onClick={increment}
-      style={{
-        fontSize: "large",
-        backgroundColor: "#251f22",
-        color: "white",
-        border: 0,
-        padding: 10,
-        margin: "10px 0",
-        borderRadius: "13px",
-      }}
-    >
+    <button onClick={increment} style={buttonStyle}>
       Add
     </button>
   </div>

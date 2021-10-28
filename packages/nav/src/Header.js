@@ -6,7 +6,7 @@ const HeaderBlock = ({ cart, increment }) => (
   <header
     style={{
       fontSize: "xx-large",
-      backgroundColor: "#251f22",
+      backgroundColor: "#313D5A",
       color: "white",
       padding: "20px",
       display: "flex",
@@ -25,8 +25,8 @@ const HeaderBlock = ({ cart, increment }) => (
       <button
         style={{
           fontSize: "large",
-          backgroundColor: "#f2d42d",
-          color: "#251f22",
+          backgroundColor: "#D62839",
+          color: "white",
           border: 0,
           padding: 10,
           margin: "0 10px",
