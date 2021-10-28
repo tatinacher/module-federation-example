@@ -7,3 +7,5 @@ export const buttonStyle = {
   margin: "10px 0",
   borderRadius: "13px",
 };
+
+export const dataStyle = { background: "#fff6a3", color: "black" };

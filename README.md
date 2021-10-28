@@ -12,16 +12,28 @@
 
 ### About
 
+`/packages/data` -> remote app
+
+`/packages/dynamic` -> host app
+
 `/packages/home` -> host app
 
 `/packages/nav` -> remote app
 
+### More info
+
+`data` app exposes values, fn, class, component
+
+`dynamic` app dynamicly load React component
+
+`home` gets Header from remote `nav`, values from remote `data` and render it on page
+
 `nav` app exposes `Header` component
 
-`home` gets Header from remote `nav` and render it on page.
+### State manager
 
-To share state between `home` and `nav` was used Effector state manager
+Effector state manager was used to share state between `home` and `nav`
 
-Model -> `home/src/feature/cart/model`
+model -> `home/src/feature/cart/model`
 
 to connect -> `import model from "home/cart";`

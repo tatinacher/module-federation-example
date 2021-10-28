@@ -1,5 +1,5 @@
 import * as React from "react";
-import { buttonStyle } from "./lib/styles";
+import { buttonStyle, dataStyle } from "./lib/styles";
 
 const printConsole = (args) => {
   import("data/function")
@@ -37,21 +37,15 @@ export const Data = () => {
     <div>
       <div style={{ fontSize: "large", padding: "20px 0" }}>RemoteData</div>
       Value:
-      <span style={{ background: "#fff6a3", color: "black" }}>
-        {simpleValue}
-      </span>
+      <span style={dataStyle}>{simpleValue}</span>
       <br />
       <br />
       Array:
-      <span style={{ background: "#fff6a3", color: "black" }}>
-        [{simpleArray.join(", ")}]
-      </span>
+      <span style={dataStyle}>[{simpleArray.join(", ")}]</span>
       <br />
       <br />
       Object:
-      <span style={{ background: "#fff6a3", color: "black" }}>
-        {JSON.stringify(simpleObject)}
-      </span>
+      <span style={dataStyle}>{JSON.stringify(simpleObject)}</span>
       <div>
         <button style={buttonStyle} onClick={printConsole}>
           Remote print to console

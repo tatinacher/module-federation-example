@@ -46,6 +46,7 @@ module.exports = {
         home: "home@http://localhost:8080/remoteEntry.js",
         nav: "nav@http://localhost:3001/remoteEntry.js",
         data: "data@http://localhost:3002/remoteEntry.js",
+        dynamic: "dynamic@http://localhost:3003/remoteEntry.js",
       },
       exposes: {
         "./cart": "./src/feature/cart/model",
