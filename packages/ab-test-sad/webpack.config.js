@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:3004/",
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8080,
+    port: 3004,
   },
 
   module: {
@@ -40,17 +40,11 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "home",
+      name: "abtestsad",
       filename: "remoteEntry.js",
-      remotes: {
-        home: "home@http://localhost:8080/remoteEntry.js",
-        data: "data@http://localhost:3002/remoteEntry.js",
-        dynamic: "dynamic@http://localhost:3003/remoteEntry.js",
-        nav: "nav@http://localhost:3001/remoteEntry.js",
-        abtestsad: "abtestsad@http://localhost:3004/remoteEntry.js",
-      },
+      remotes: {},
       exposes: {
-        "./cart": "./src/feature/cart/model",
+        "./ChosenVariant": "./src/ChosenVariant",
       },
       shared: {
         ...deps,
@@ -61,6 +55,10 @@ module.exports = {
         "react-dom": {
           singleton: true,
           requiredVersion: deps["react-dom"],
+        },
+        effector: {
+          singleton: true,
+          requiredVersion: deps.effector,
         },
       },
     }),

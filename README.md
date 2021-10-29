@@ -20,6 +20,8 @@
 
 `/packages/nav` -> remote app
 
+`/packages/ad-test-sad` -> remote app
+
 ### More info
 
 `data` app exposes values, fn, class, component
@@ -29,6 +31,8 @@
 `home` gets Header from remote `nav`, values from remote `data` and render it on page
 
 `nav` app exposes `Header` component
+
+`ad-test-sad` app exposes `ChosenVariant` component to show random image for A/B test
 
 ### State manager
 

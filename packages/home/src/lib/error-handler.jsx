@@ -32,11 +32,11 @@ class FederatedWrapper extends React.Component {
 
 export default FederatedWrapper;
 
-// export const wrapComponent =
-//   (Component) =>
-//   ({ error, delayed, ...props }) =>
-//     (
-//       <FederatedWrapper error={error} delayed={delayed}>
-//         <Component {...props} />
-//       </FederatedWrapper>
-//     );
+export const wrapComponent =
+  (Component) =>
+  ({ error, delayed, ...props }) =>
+    (
+      <FederatedWrapper error={error} delayed={delayed}>
+        <Component {...props} />
+      </FederatedWrapper>
+    );

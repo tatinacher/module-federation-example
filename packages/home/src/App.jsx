@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import { Cart } from "./feature";
 import { Data } from "./Data";
+import { ABTestSad } from "./ABTest";
 
 import "./index.css";
 
@@ -16,6 +17,7 @@ const App = () => {
       <div style={{ padding: "20px 0" }}>This is a host application</div>
       <Cart />
       <Data />
+      <ABTestSad />
     </div>
   );
 };
