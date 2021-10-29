@@ -37,3 +37,12 @@ Effector state manager was used to share state between `home` and `nav`
 model -> `home/src/feature/cart/model`
 
 to connect -> `import model from "home/cart";`
+
+### Fallback header
+
+If `Header` from `nav` is not available, `home` will load fallback module that is created in `nav` through npm modules.
+
+To install dependencies run `yarn workspace home add navigation@1.0.0`.
+
+When you start only `home` app you'll see that Header still shown.
+Details of implementation -> `home/src/Header.jsx`

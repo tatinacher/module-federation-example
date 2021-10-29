@@ -11,9 +11,16 @@ class FederatedWrapper extends React.Component {
   componentDidCatch(error, errorInfo) {
     // logErrorToMyService(error, errorInfo);
   }
+
   render() {
+    console.log(this.props.error, this.props.children);
+
     if (this.state.hasError) {
-      return this.props.error || <h1>Something went wrong.</h1>;
+      return (
+        <React.Suspense fallback={"loading npm module"}>
+          {this.props.error}
+        </React.Suspense>
+      );
     }
     return (
       <React.Suspense fallback={this.props.delayed || <div />}>
@@ -23,11 +30,13 @@ class FederatedWrapper extends React.Component {
   }
 }
 
-export const wrapComponent =
-  (Component) =>
-  ({ error, delayed, ...props }) =>
-    (
-      <FederatedWrapper error={error} delayed={delayed}>
-        <Component {...props} />
-      </FederatedWrapper>
-    );
+export default FederatedWrapper;
+
+// export const wrapComponent =
+//   (Component) =>
+//   ({ error, delayed, ...props }) =>
+//     (
+//       <FederatedWrapper error={error} delayed={delayed}>
+//         <Component {...props} />
+//       </FederatedWrapper>
+//     );
